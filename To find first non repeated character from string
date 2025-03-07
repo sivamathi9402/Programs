@@ -9,7 +9,7 @@ for(let i of array) {
 for(let i of array) {
   if(obj[i] == 1) { // Find first non repeat character from stored object  
     output.push(i);
-    break;
+    break; // Breaks once found first character, without break will give all non repeat characters from string.
   }
   
 }
