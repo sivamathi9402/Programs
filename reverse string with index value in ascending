@@ -1,0 +1,8 @@
+var str = "feddccbggbaa";
+let arr = [...str]; // Convert string to array manually
+let output =[];
+let count = 1;
+for(let i = arr.length - 1; i >= 0 ; i--, count++) {
+  output.push(arr[i] + count); // reverse string and print along with index in ascending
+}
+console.log(output.join(''));
