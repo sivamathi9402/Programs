@@ -1,0 +1,14 @@
+var str = "aabbccdffh";
+var obj = {};
+var removeduplicate = "";
+var repeatchar = "";
+for(let i = 0; i < str.length; i++) {
+  obj[str[i]] = (obj[str[i]] || 0) + 1;
+    if (obj[str[i]] == 1)  // condition to remove duplicate from string
+     removeduplicate += str[i];
+    if (obj[str[i]] > 1) // condition to check repeat char from string
+     repeatchar += str[i];
+}
+
+console.log(removeduplicate);
+console.log(repeatchar);
