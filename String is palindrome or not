@@ -1,0 +1,10 @@
+//var str = "racecar";
+var str = "race";
+let reversestr = "";
+for(let i = str.length-1; i >= 0; i--) {
+  reversestr += str[i]; // reverse string
+}
+if(str == reversestr)
+console.log("String is a Palindrome");
+else
+console.log("String is not a Palindrome");
