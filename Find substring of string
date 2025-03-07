@@ -1,0 +1,12 @@
+var str = "abc";
+var substr = [];
+
+for (var i=0; i < str.length; i++){
+  let collect = '';
+  for (var j=i; j < str.length; j++) {
+    collect += str[j];
+    substr.push(collect); // add next element and push to array
+  }
+}
+
+console.log(substr);
