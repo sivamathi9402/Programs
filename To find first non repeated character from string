@@ -1,15 +1,16 @@
 var str = "aabbccdef";
-var array = [...str];
-var obj = {};
+var array = [...str]; // converting string to array.
+var obj = {}; // To check characters with count
 var output = [];
 for(let i of array) {
-    obj[i] = (obj[i] || 0) + 1;
+    obj[i] = (obj[i] || 0) + 1; // contains characters and count
 }
 
 for(let i of array) {
-  if(obj[i] == 1) {  
+  if(obj[i] == 1) { // Find first non repeat character from stored object  
     output.push(i);
+    break;
   }
   
 }
-console.log(output.join(''));
+console.log(output.join('')); // convert to string
