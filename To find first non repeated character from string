@@ -1,0 +1,15 @@
+var str = "aabbccdef";
+var array = [...str];
+var obj = {};
+var output = [];
+for(let i of array) {
+    obj[i] = (obj[i] || 0) + 1;
+}
+
+for(let i of array) {
+  if(obj[i] == 1) {  
+    output.push(i);
+  }
+  
+}
+console.log(output.join(''));
