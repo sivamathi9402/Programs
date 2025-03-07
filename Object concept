@@ -1,0 +1,9 @@
+var object = [{id:1, name:'Employee1'},{id:2, name:'Employee2'},{id:3, name:'Employee3'},
+{id:4, name:'Employee4'},{id:5, name:'Employee5'}];
+
+console.log(Object.keys(object)); // return only object keys
+console.log(object); // return object
+console.log(Object.values(object)); // return object
+console.log(object.map(obj => obj.name)); // return all values from object
+console.log(object.find(obj => obj.id === 3)?.name); // return specific value of key
+console.log(object.filter(obj => obj.id === 3).map(obj => obj.name).join(''));  // return specific value of key
