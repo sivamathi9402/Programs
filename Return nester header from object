@@ -1,0 +1,53 @@
+
+const company = {
+  name: "TechCorp",
+  location: "New York",
+  departments: {
+    engineering: {
+      head: "Alice Johnson",
+      employees: [
+        { id: 1, name: "John Doe", role: "Software Engineer" },
+        { id: 2, name: "Jane Smith", role: "DevOps Engineer" }
+      ],
+      header: {
+      headeremployees: [
+        { id: 1, name: "John Doe", role: "Software Engineer" }
+      ]
+    },
+    },
+    marketing: {
+      head: "Robert Brown",
+      employees: [
+        { id: 3, name: "Emma Wilson", role: "SEO Specialist" },
+        { id: 4, name: "Liam Davis", role: "Content Writer" }
+      ]
+    }
+  }
+}; // nested object
+
+// Find parent of given input key
+
+console.log(findParentKeys(company, "headeremployees"));
+
+function findParentKeys(obj, targetKey, fix = '') {
+  
+  for (let key in obj) {
+    const newKey = fix ? `${fix}.${key}` : key; // to store hierarchy value
+    if (key === targetKey) {
+      return newKey ? newKey : ['Root']; // Return the parent hierarchy
+    }
+    if (typeof obj[key] === 'object' && obj[key] !== null) {
+      let result = findParentKeys(obj[key], targetKey, newKey);
+      if (result) return result;
+    }
+  }
+
+  return null; // Key not found
+}
+
+
+
+
+
+
+
